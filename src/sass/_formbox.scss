@@ -1,0 +1,70 @@
+.formbox {
+  position: relative;
+  background-color: #232323;
+  border-radius: 8px;
+  max-width: 410px;
+  width: 75%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 20px;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.3);
+  transition-duration: 0.4s;
+
+  .hello {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  .text-area {
+    color: #cecece;
+  }
+
+  .input-mail {
+    background-color: #353535;
+    border: 1px solid rgba(255, 232, 31, 0.3);
+    height: 32px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 24px 0 26px 0;
+    outline: none;
+    transition-duration: 0.4s;
+  }
+
+  .invalid-input {
+    border: 1px solid #c47768 !important;
+  }
+
+  .input-mail.focused {
+    border: 1px solid #ffe81f;
+  }
+
+  .input-mail.valid {
+    border: 1px solid #03dac6;
+  }
+
+  .invalid-text {
+    font-size: 12px;
+    position: absolute;
+    top: 150px;
+    left: 25px;
+    color: #c47768;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.4s;
+
+    @media (max-width: 534px) {
+      top: 173px;
+    }
+
+    @media (max-width: 326px) {
+      top: 197px;
+    }
+  }
+
+  .invalid-text.on {
+    opacity: 1;
+  }
+}
